@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<configuration>
+
+  <!--
+  <property>
+    <name>dt.application.{appName}.operator.{opName}.prop.{propName}</name>
+    <value>some-default-value (if value is not specified, it is required from the user or custom config when launching)</value>
+  </property>
+  -->
+
+  <!-- memory assigned to app master-->
+  <property>
+    <name>dt.attr.MASTER_MEMORY_MB</name>
+    <value>512</value>
+  </property>
+
+  <!--LineByLineInputReader Operator-->
+  <property>
+    <name>dt.application.Single_FASTQ_Mapper.operator.FASTQ_Reader.prop.directory</name>
+    <value>file:///home/plaban/Test/Input/Small_FASTQ</value>
+  </property>
+
+  <!--FileOutput Operator-->
+  <property>
+    <name>dt.operator.SAM_Writer.prop.filePath</name>
+    <value>file:///home/plaban/Test/Output/SAM/Mapped_Small_SAM</value>
+  </property>
+
+  <property>
+    <name>dt.operator.SAM_Writer.prop.outputFileName</name>
+    <value>mapped_Single_FASTQ.sam</value>
+  </property>
+
+  <!--Mapper Operator-->
+  <property>
+    <name>dt.operator.Mapper.prop.refFilePath</name>
+    <value>/home/plaban/Test/Reference/Rota_Virus/ref.fa</value>
+  </property>
+
+</configuration>
+
